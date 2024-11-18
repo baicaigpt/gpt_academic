@@ -226,11 +226,11 @@ def predict(inputs:str, llm_kwargs:dict, plugin_kwargs:dict, chatbot:ChatBotWith
     from request_llms.bridge_all import model_info
     if is_any_api_key(inputs):
         chatbot._cookies['api_key'] = inputs
-        chatbot.append(("输入已识别为openai的api_key", what_keys(inputs)))
+        chatbot.append(("输入已识别为白菜AI的会员卡激活码", what_keys(inputs)))
         yield from update_ui(chatbot=chatbot, history=history, msg="api_key已导入") # 刷新界面
         return
     elif not is_any_api_key(chatbot._cookies['api_key']):
-        chatbot.append((inputs, "缺少api_key。\n\n1. 临时解决方案：直接在输入区键入api_key，然后回车提交。\n\n2. 长效解决方案：在config.py中配置。"))
+        chatbot.append((inputs, "请输入您的会员卡激活码\n\n1. 购买激活码：请访问 [白菜AI官方旗舰店](https://shop.baicaiai.com)  自助下单购买。PS：为了您的数据安全，激活码请勿外传，仅自己使用！\n\n2. 激活会员卡：请直接在输入区键入激活码，然后回车提交即可。PS：不限字数，无限使用OpenAI最新大模型，最低仅需0.2元/天！"))
         yield from update_ui(chatbot=chatbot, history=history, msg="缺少api_key") # 刷新界面
         return
 
@@ -419,7 +419,7 @@ def generate_payload(inputs:str, llm_kwargs:dict, history:list, system_prompt:st
     from request_llms.bridge_all import model_info
 
     if not is_any_api_key(llm_kwargs['api_key']):
-        raise AssertionError("你提供了错误的API_KEY。\n\n1. 临时解决方案：直接在输入区键入api_key，然后回车提交。\n\n2. 长效解决方案：在config.py中配置。")
+        raise AssertionError("你提供了错误的API_KEY。\n\n1. 购买激活码：请访问 [白菜AI官方旗舰店](https://shop.baicaiai.com)  自助下单购买。PS：为了您的数据安全，激活码请勿外传，仅自己使用！\n\n2. 激活会员卡：请直接在输入区键入激活码，然后回车提交即可。PS：不限字数，无限使用OpenAI最新大模型，最低仅需0.2元/天！")
 
     if llm_kwargs['llm_model'].startswith('vllm-'):
         api_key = 'no-api-key'

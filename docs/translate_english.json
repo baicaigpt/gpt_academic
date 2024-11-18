@@ -1242,7 +1242,7 @@
     "导致输出不完整": "Resulting in incomplete output",
     "请削减单次输入的文本量": "Please reduce the amount of text input per request",
     "temperature是chatGPT的内部调优参数": "Temperature is an internal tuning parameter of chatGPT",
-    "输入已识别为openai的api_key": "The input has been recognized as OpenAI's api_key",
+    "输入已识别为白菜AI的会员卡激活码": "The input has been recognized as OpenAI's api_key",
     "api_key已导入": "api_key has been imported",
     "缺少api_key": "Missing api_key",
     "MOSS尚未加载": "MOSS has not been loaded yet",

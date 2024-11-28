@@ -264,7 +264,7 @@ function loadTipsMessage(result) {
     });
 
     window.showWelcomeMessage = function(result) {
-        showMessage('欢迎使用GPT-Academic不限量版', 6000);
+        showMessage("欢迎使用GPT-Academic不限量版 BaiCaiAi.com购买会员激活码</a>");
     }; if (live2d_settings.showWelcomeMessage) showWelcomeMessage(result);
 
     var waifu_tips = result.waifu;

@@ -261,7 +261,7 @@ class WelcomeMessage {
         // 创建主标题
         const major_title = document.createElement('div');
         major_title.classList.add('welcome-title');
-        major_title.textContent = "欢迎使用GPT-Academic不限量版";
+        major_title.textContent = "欢迎使用GPT-Academic不限量版 BaiCaiAi.com购买会员激活码";
         welcome_card_container.appendChild(major_title)
 
         // 创建卡片
